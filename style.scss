@@ -1,0 +1,119 @@
+@import 'node_modules/solar-css/lib/index';
+@import 'node_modules/solar-stellarorg/lib/index';
+//@import 'node_modules/solar-stellarorg-pages/lib/index';
+
+@import 'node_modules/solar-css/styles/index';
+@import 'node_modules/solar-stellarorg/styles/index';
+//@import 'node_modules/solar-stellarorg-pages/styles/index';
+
+//variables
+$border-color: $s-color-neutral5;
+
+//basic structure
+.container {
+	margin: auto;
+	padding: 0;
+	@media screen and (min-width: 768px) {
+		max-width: 740px;
+        padding: 0.5em;
+	}
+}
+
+//basic forms & buttons
+button {
+	@extend .s-button;
+    margin-top: 0.25em;
+}
+
+input[type="text"],
+input[type="number"],
+{
+	width: 100%;
+	margin: 0.25em 0 1em;
+}
+
+label {
+	font-weight: bold;
+    margin-top: 0.5em;
+    &.checkbox-label, &.radio-label {
+        font-weight: normal;
+    }
+}
+
+pre {
+    background: $s-color-neutral2;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 0.88em;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding: 0.5em;
+}
+
+h3 { 
+    margin-top: 1em;
+    @media screen and (min-width: 768px) {
+
+    }
+}
+
+// widget generic styles
+.widget-row {
+    margin: 15px 0;
+    section {
+        margin: 1em 0;
+        padding-bottom: 1em;
+        border-bottom: 1px dotted $border-color;
+    }
+    ul {
+        padding: 0 0 0 1em;
+    }
+    @media screen and (min-width: 768px) {
+        margin: 25px 0 25px 0;  
+    }
+}
+.widget {
+    border-bottom: 1px $border-color solid;
+    padding: 0.5em 1em 1em;
+    @media screen and (min-width: 768px) {
+        border: 1px $border-color solid;
+        border-radius: 3px;
+        padding: 1em;  
+    }
+}
+.widget .shrink {
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+}
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+.form-input {
+    margin: 5px 0 5px 0;
+}
+
+.account-row {
+    margin-top: 10px;
+}
+
+.account-row.top {
+    margin-top: 0px;
+}
+
+.account-row .shrink {
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+}
+
+.account-row .section {
+    font-style: italic;
+}
+
+.balance {
+    border: 1px black solid;
+    padding: 3px;
+    margin-bottom: 3px;
+}
